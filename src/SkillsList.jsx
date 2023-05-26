@@ -1,11 +1,14 @@
-import SkillDisplay from "./SkillDisplay";
-import Skill from "./SkillDisplay";
+import SkillListItem from "./SkillListItem";
 
 export default function SkillsList(){
     return(
         <>
-        <h3>Skill List</h3>
-        <SkillDisplay />
+        <h3>Skills Listed Below</h3>
+        <ul>
+        <SkillListItem />
+        <SkillListItem />
+        <SkillListItem />
+        </ul>
         </>
     )
 }

@@ -1,7 +1,9 @@
-export default function SkillDisplay() {
+export default function SkillListItem() {
+  return(
   <>
     <ul>
       <li>NewSkillForm Output should go here</li>
     </ul>
-  </>;
+  </>
+  );
 }
