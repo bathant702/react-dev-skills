@@ -1,9 +1,11 @@
-export default function SkillListItem() {
+import './SkillListItem.css'
+
+export default function SkillListItem(props) {
   return(
-  <>
-    <ul>
-      <li>NewSkillForm Output should go here</li>
-    </ul>
-  </>
+    <>
+      <li className='SkillListItem'>
+        {props.skill.name}<label className='level'>Level {props.skill.level}</label>
+      </li>
+    </>
   );
 }

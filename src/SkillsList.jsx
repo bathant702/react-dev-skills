@@ -1,14 +1,15 @@
 import SkillListItem from "./SkillListItem";
+import "./SkillList.css";
 
-export default function SkillsList(){
-    return(
+export default function SkillsList(props) {
+    return (
         <>
-        <h3>Skills Listed Below</h3>
-        <ul>
-        <SkillListItem />
-        <SkillListItem />
-        <SkillListItem />
-        </ul>
+        <div>
+            {props.skills.map((skill, idx) => {
+                return <SkillListItem skill={skill} key={idx} index={idx} />
+            })
+        }    
+        </div>    
         </>
-    )
-}
+    );
+    }
