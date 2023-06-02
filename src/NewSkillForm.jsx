@@ -8,11 +8,13 @@ export default function NewSkillForm({ addSkill }) {
   });
 
   function handleChange(e) {
+    console.log(e.target.name)
     setNewSkills({
       ...newSkill,
       [e.target.name]: e.target.value,
     });
   }
+
   function handleAddSkill(e) {
     e.preventDefault()
     addSkill(newSkill)
@@ -28,7 +30,7 @@ export default function NewSkillForm({ addSkill }) {
         Skill:
         <input
           type="text"
-          name="Skill"
+          name="name"
           value={newSkill.name}
           onChange={handleChange}
           required
@@ -37,7 +39,7 @@ export default function NewSkillForm({ addSkill }) {
         <select
           className="level-select"
           name="level"
-          value={newSkill.option}
+          value={newSkill.level}
           onChange={handleChange}
           >
             <option value={1}>1</option>
